@@ -20,21 +20,41 @@ h1 {
     margin: 50px auto 0 auto;
 }
 
-.container article {
-    background-color: #a7e9af;
+.card {
     width: 117px;
     height: 146px;
+    position: relative;
     margin: 17px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #a7e9af;
+    border: 1px solid #99cea8;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #99cea8;
-    border-radius: 5px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
 }
 
 article img {
     width: 100px;
     height: 100px;
+}
 
+.back-face {
+    transform: rotateY(180deg);
+}
 
+article:hover .back-face {
+    transform: rotateY(0deg);
+}
+
+article:hover .front-face {
+    transform: rotateY(-180deg);
 }
