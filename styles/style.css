@@ -38,7 +38,7 @@ h1 {
     justify-content: center;
     position: absolute;
     backface-visibility: hidden;
-    transition: all 0.5s;
+    transition: all 0.7s;
     transform-style: preserve-3d;
 }
 
@@ -51,10 +51,10 @@ article img {
     transform: rotateY(180deg);
 }
 
-article:hover .back-face {
+.flip .back-face {
     transform: rotateY(0deg);
 }
 
-article:hover .front-face {
+.flip .front-face {
     transform: rotateY(-180deg);
 }
