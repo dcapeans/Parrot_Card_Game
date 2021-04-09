@@ -54,10 +54,10 @@ function shuffle() {
 }
 
 function flipCard(element) {
-    if(openCards.length === 2){
+    if (openCards.length === 2) {
         return
     }
-    if(!element.classList.contains("flip")){
+    if (!element.classList.contains("flip")) {
         element.classList.add("flip")
         openCards.push(element)
         addMovesCounter()
@@ -66,24 +66,24 @@ function flipCard(element) {
     setTimeout(checkEndGame, 200)
 }
 
-function unmatched(){
+function unmatched() {
     openCards[0].classList.remove("flip")
     openCards[1].classList.remove("flip")
     openCards = [];
 }
 
-function checkEndGame(){
+function checkEndGame() {
     gameOverText = `Você ganhou em ${movesCounter} jogadas em ${minute}min e ${second}s`
-    if(matchedPairs === NumberCards/2){
+    if (matchedPairs === NumberCards / 2) {
         clearInterval(interval)
         alert(gameOverText)
         restartGame()
     }
 }
 
-function compareCards(length){
-    if(length === 2){
-        if(openCards[0].dataset.index === openCards[1].dataset.index){
+function compareCards(length) {
+    if (length === 2) {
+        if (openCards[0].dataset.index === openCards[1].dataset.index) {
             matchedPairs++;
             openCards = [];
         } else {
@@ -92,35 +92,35 @@ function compareCards(length){
     }
 }
 
-function addMovesCounter(){
+function addMovesCounter() {
     movesCounter++
-    if(movesCounter === 1){
+    if (movesCounter === 1) {
         second = 0;
         minute = 0;
         setTimer()
     }
 }
 
-function setTimer(){
-    interval = setInterval(function(){
+function setTimer() {
+    interval = setInterval(function () {
         timer.innerHTML = `${minute}min ${second}s`;
         second++
-        if(second === 60){
+        if (second === 60) {
             minute++
             second = 0;
         }
-        
+
     }, 1000)
 }
 
-function restartGame(){
+function restartGame() {
     const restart = prompt("Gostaria de jogar novamente?")
-    if(restart === "sim"){
+    if (restart === "sim") {
         movesCounter = 0
         matchedPairs = 0
         cardsIndex = []
         container.innerHTML = ""
-        second= 0
+        second = 0
         minute = 0
         timer.innerHTML = `${minute}min ${second}s`;
         askCardNumber()

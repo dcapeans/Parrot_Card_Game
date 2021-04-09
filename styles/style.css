@@ -13,7 +13,7 @@ h1 {
     margin-top: 40px;
 }
 
-.timer{
+.timer {
     position: absolute;
     top: 0px;
     right: 50px;
@@ -79,26 +79,13 @@ article img {
 }
 
 
-@media(max-width:500px){
+@media(max-width:500px) {
 
-    /* header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background-color: #EEF9BF;
-    }
-
-    .container{
-        margin-top: 200px;
-    } */
-
-    h1{
+    h1 {
         margin-top: 70px;
     }
 
-    .timer{
+    .timer {
         position: fixed;
         margin: 0 auto;
         right: 20px;
