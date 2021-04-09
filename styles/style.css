@@ -1,6 +1,7 @@
 body {
     background-color: #EEF9BF;
     font-family: 'Roboto';
+    position: relative;
 }
 
 h1 {
@@ -10,6 +11,20 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     margin-top: 40px;
+}
+
+.timer{
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    width: 200px;
+    padding: 10px;
+    font-size: 35px;
+    color: #000;
+    background-color: #afe0ce69;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #75b79e;
 }
 
 .container {
@@ -61,4 +76,33 @@ article img {
 
 .disabled {
     pointer-events: none;
+}
+
+
+@media(max-width:500px){
+
+    /* header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #EEF9BF;
+    }
+
+    .container{
+        margin-top: 200px;
+    } */
+
+    h1{
+        margin-top: 70px;
+    }
+
+    .timer{
+        position: fixed;
+        margin: 0 auto;
+        right: 20px;
+        top: 10px;
+        z-index: 1;
+    }
 }
