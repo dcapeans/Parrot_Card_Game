@@ -50,13 +50,15 @@ function shuffle() {
 }
 
 function flipCard(element) {
+    if(openCards.length === 2){
+        return
+    }
     if(!element.classList.contains("flip")){
         element.classList.add("flip")
         openCards.push(element)
-        const length = openCards.length
         movesCounter++
 
-        compareCards(length)
+        compareCards(openCards.length)
     }
     setTimeout(checkEndGame, 200)
 }
