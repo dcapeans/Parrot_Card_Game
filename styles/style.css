@@ -58,3 +58,7 @@ article img {
 .flip .front-face {
     transform: rotateY(-180deg);
 }
+
+.disabled {
+    pointer-events: none;
+}
